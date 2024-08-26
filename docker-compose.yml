@@ -3,17 +3,18 @@ version: '3.8'
 services:
   web:
     build: .
-    command: python manage.py runserver
+    command: flask run --host=0.0.0.0
     volumes:
       - .:/app
     ports:
       - "5000:5000"
     environment:
-      - DATABASE_URL=${DATABASE_URL}
-      - FLASK_ENV=${FLASK_ENV}
-      - FLASK_APP=${FLASK_APP}
+      - FLASK_APP=manage.py
+      - FLASK_ENV=development
     depends_on:
       - db
+    env_file:
+      - .env
 
   db:
     image: postgres:13
@@ -22,4 +23,4 @@ services:
       POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
       POSTGRES_DB: ${POSTGRES_DB}
     ports:
-      - "5432:5432"
+      - "5435:5432"
