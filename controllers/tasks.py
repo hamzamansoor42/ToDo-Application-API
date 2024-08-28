@@ -3,7 +3,7 @@ import sys
 sys.path.append(os.path.abspath(os.path.dirname(__file__)))
 from flask import Blueprint, request, jsonify
 from flask_jwt_extended import jwt_required, get_jwt_identity
-from db import db
+from utils.db import db
 from models.models import Task
 
 tasks_blueprint = Blueprint('tasks', __name__)

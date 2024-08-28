@@ -1,7 +1,7 @@
 import os
 import sys
 sys.path.append(os.path.abspath(os.path.dirname(__file__)))
-from db import db
+from utils.db import db
 
 class User(db.Model):
     id = db.Column(db.Integer, primary_key=True)

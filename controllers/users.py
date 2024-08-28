@@ -4,7 +4,7 @@ import hashlib
 sys.path.append(os.path.abspath(os.path.dirname(__file__)))
 from flask import Blueprint, request, jsonify
 from flask_jwt_extended import create_access_token
-from db import db
+from utils.db import db
 from models.models import User
 
 user_blueprint = Blueprint('user', __name__)
@@ -49,7 +49,7 @@ def login():
         return jsonify({"msg": "Invalid username or password"}), 401
 
     access_token = create_access_token(
-        user={
+        identity={
             "username": username,
             "user_id": user.id
         }

@@ -3,7 +3,7 @@ import sys
 sys.path.append(os.path.abspath(os.path.dirname(__file__)))
 from flask import Flask, jsonify
 from flask_jwt_extended import JWTManager
-from db import db
+from utils.db import db
 from controllers.users import user_blueprint
 from controllers.tasks import tasks_blueprint
 
@@ -11,7 +11,7 @@ jwt = JWTManager()
 
 def create_app():
     app = Flask(__name__)
-    app.config.from_object('config.Config')
+    app.config.from_object('utils.config.Config')
     db.init_app(app)
     jwt.init_app(app)
     

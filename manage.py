@@ -1,6 +1,6 @@
 from flask.cli import FlaskGroup
 from app import create_app
-from db import db
+from utils.db import db
 from flask_migrate import Migrate
 
 app = create_app()
