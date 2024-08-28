@@ -3,3 +3,5 @@ Flask-SQLAlchemy
 Flask-Migrate
 Flask-Script
 psycopg2-binary
+Flask-JWT-Extended
+python-dotenv
