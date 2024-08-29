@@ -54,9 +54,9 @@ A simple Flask-based web application for user management and task management fun
     POSTGRES_PASSWORD=password
     POSTGRES_DB=database_name
 
-3. **Build and Start the Containers**
+3. **Build the Containers**
     ```bash
-    docker-compose up --build
+    docker-compose build
 
 4. **Initialize the Database**
     Run the following commands to set up the database schema:
