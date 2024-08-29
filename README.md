@@ -8,7 +8,6 @@ A simple Flask-based web application for user management and task management fun
 - CRUD operations for tasks (Create, Read, Update, Delete)
 
 ## Project Structure
-    ``bash
     /todo-application-api
         /controllers
             users.py
