@@ -64,16 +64,15 @@ A simple Flask-based web application for user management and task management fun
     docker-compose run web flask db migrate -m "Initial migration"
     docker-compose run web flask db upgrade
 
-5. **Running the Application**
+5. **Running the Application:**
+    The Flask application will be available at http://localhost:5000. You can access it using your browser or API clients like Postman.
     ```bash
     docker-compose up
 
-The Flask application will be available at http://localhost:5000. You can access it using your browser or API clients like Postman.
-
-6. **Running tests**
+6. **Running tests:**
     To run the tests using Docker, execute:
     ```bash
-    docker-compose run test
+    docker-compose run tests
 
 ### Endpoints
 Here’s a summary of the API endpoints:
