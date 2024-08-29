@@ -5,3 +5,4 @@ Flask-Script
 psycopg2-binary
 Flask-JWT-Extended
 python-dotenv
+pytest

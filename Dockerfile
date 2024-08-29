@@ -8,12 +8,13 @@ ENV PYTHONUNBUFFERED 1
 # Set the working directory in the container
 WORKDIR /app
 
-# Install dependencies
-COPY requirements.txt /app/
-RUN pip install --no-cache-dir -r requirements.txt
+COPY requirements.txt requirements.txt
+RUN pip install -r requirements.txt
 
-# Copy the current directory contents into the container at /app
-COPY . /app/
+COPY . .
 
-# Run the application
+EXPOSE 5000
+
+ENV FLASK_APP=manage.py
+
 CMD ["python", "manage.py", "runserver"]
