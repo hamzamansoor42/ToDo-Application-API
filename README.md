@@ -8,23 +8,24 @@ A simple Flask-based web application for user management and task management fun
 - CRUD operations for tasks (Create, Read, Update, Delete)
 
 ## Project Structure
-/todo-application-api
-    /controllers
-        users.py
-        tasks.py
-    /models
-        models.py
-    /utils
-        config.py
-        db.py
-    /migrations
-    manage.py
-    app.py
-    Dockerfile
-    docker-compose.yml
-    .env
-    requirements.txt
-    README.md
+    ``bash
+    /todo-application-api
+        /controllers
+            users.py
+            tasks.py
+        /models
+            models.py
+        /utils
+            config.py
+            db.py
+        /migrations
+        manage.py
+        app.py
+        Dockerfile
+        docker-compose.yml
+        .env
+        requirements.txt
+        README.md
 
 
 
