@@ -38,13 +38,12 @@ A simple Flask-based web application for user management and task management fun
 
 ### Setup
 
-1. **Clone the Repository**
-
+1. **Clone the Repository:**
    ```bash
    git clone https://github.com/hamzamansoor42/ToDo-Application-API.git
    cd ToDo-Application-API
 
-2. **Create .env file**
+2. **Create .env file:**
     Create a .env file in the root directory of the project with the following content:
     ```bash
     DATABASE_URL=postgresql://username:password@db:5432/yourdbname
@@ -54,11 +53,11 @@ A simple Flask-based web application for user management and task management fun
     POSTGRES_PASSWORD=password
     POSTGRES_DB=database_name
 
-3. **Build the Containers**
+3. **Build the Containers:**
     ```bash
     docker-compose build
 
-4. **Initialize the Database**
+4. **Initialize the Database:**
     Run the following commands to set up the database schema:
     ```bash
     docker-compose run web flask db init
@@ -66,9 +65,10 @@ A simple Flask-based web application for user management and task management fun
     docker-compose run web flask db upgrade
 
 5. **Running the Application**
-    The Flask application will be available at http://localhost:5000. You can access it using your browser or API clients like Postman.
     ```bash
     docker-compose up
+
+The Flask application will be available at http://localhost:5000. You can access it using your browser or API clients like Postman.
 
 6. **Running tests**
     To run the tests using Docker, execute:
