@@ -50,6 +50,9 @@ A simple Flask-based web application for user management and task management fun
     DATABASE_URL=postgresql://username:password@db:5432/yourdbname
     SECRET_KEY=your_secret_key
     JWT_SECRET_KEY=your_jwt_secret_key
+    POSTGRES_USER=username
+    POSTGRES_PASSWORD=password
+    POSTGRES_DB=database_name
 
 3. **Build and Start the Containers**
     ```bash
